@@ -62,6 +62,7 @@ const Note: FC<Props> = ({ note, forceInEditMode }) => {
     >
       {inEditMode ? (
         <form onBlur={onFormBlur} className="grid gap-4" action={saveAction}>
+          <input type="hidden" name="id" value={note.id} />
           <input
             defaultValue={stateNote.title}
             ref={titleInputRef}
